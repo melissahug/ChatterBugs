@@ -1,0 +1,32 @@
+﻿@model TestApp6.Models.Message
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>ChatterFeed</h2>
+
+<div>
+    <h4 id="chatHeader">Chat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Posts)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(currentUser => currentUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posts)
+        </dd>
+        <dd>
+            @Html.DisplayFor(currentUser=> currentUser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PostID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
